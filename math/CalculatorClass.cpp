@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-
+#include <numeric>
 
 class Calculator {
     private: 
@@ -36,6 +36,25 @@ class Calculator {
         return 0;
         }
     }
+
+    // Modulo
+    double modulo(int x, int y) const{
+        if (y != 0) {
+            return x % y;
+        }
+        return NAN;
+    }
+
+    // Factorial
+    int factorial(int x) const{
+        return std::tgamma(x + 1);
+    }
+
+    // Exponential
+    double exponential(double x, int y) {
+        return std::pow(x, y);
+    }
+
 };
 
 int main() {
